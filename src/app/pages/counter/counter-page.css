@@ -1,0 +1,35 @@
+h1{
+   font-family: Arial, Helvetica, sans-serif;
+   color: blue;
+}
+h2{
+    font-style: italic;
+    color: #033603;
+}
+
+.btnDiv{
+    display:flex ;
+    gap: 12px;
+}
+
+button{
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btI{
+    background: #007bff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btD{
+    background: #178c94;
+    box-shadow: 2px 4px 0px 1px rgba(0, 0, 0, 0.9);
+}
+.btR{
+    background: #776;
+    box-shadow: 0 4px 2px 1px rgba(18, 47, 211, 0.3);
+}
