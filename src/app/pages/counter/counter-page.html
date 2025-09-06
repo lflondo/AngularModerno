@@ -1,8 +1,9 @@
 <h1>Bienvenidos al conteo</h1>
 
 <h2>Counter: {{ counter }}</h2>
+<h2>Counter Signal:{{ counterSignal() }}</h2>
 <div class="btnDiv">
   <button (click)="increaseBy(1)" class="btI">+1</button>
   <button (click)="decreaseBy(2)" class="btD">-2</button>
-  <button (click)="resetCouter()" class="btR">Reset</button>
+  <button (click)="resetCounter()" class="btR">Reset</button>
 </div>

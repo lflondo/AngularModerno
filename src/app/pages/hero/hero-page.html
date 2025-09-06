@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./hero-page.css" />
+    <title>HeroPage</title>
+  </head>
+  <body>
+    <h1>Bienvenidos a la tarea de señales</h1>
+    <hr />
+    <h2>{{ name() }}</h2>
+    <dl>
+      <dt>Nombre</dt>
+      <dd>{{ name() }}</dd>
+
+      <dt>Edad</dt>
+      <dd>{{ age() }}</dd>
+
+      <dt>Método</dt>
+      <dd>{{ getHeroDescription() }}</dd>
+
+      <dt>Capitalizado</dt>
+      <dd>{{ name().toUpperCase() }}</dd>
+    </dl>
+    <button (click)="changeHero()" class="btn btn-primary mx-2">Cambiar Hero</button>
+    <button (click)="changeAge()" class="btn btn-primary mx-2">Cambiar Edad</button>
+    <button (click)="resetForm()" class="btn btn-secondary mx-3">Restablecer</button>
+  </body>
+</html>
