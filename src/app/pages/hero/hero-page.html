@@ -21,7 +21,7 @@
       <dd>{{ getHeroDescription() }}</dd>
 
       <dt>Capitalizado</dt>
-      <dd>{{ name().toUpperCase() }}</dd>
+      <dd>{{ name() | uppercase }}</dd>
     </dl>
     <button (click)="changeHero()" class="btn btn-primary mx-2">Cambiar Hero</button>
     <button (click)="changeAge()" class="btn btn-primary mx-2">Cambiar Edad</button>
