@@ -3,27 +3,46 @@
 
 <section class="row">
   <div class="col-12 col-sm-6">
-    <h3>Agregar:</h3>
-    <input type="text" class="form-control mt-2" placeholder="Nombre del personaje" />
-    <input type="text" class="form-control mt-2" placeholder="Poder del personaje" />
+    <h3>Agregar: {{ name() }} {{ power() }}</h3>
+    <input
+      type="text"
+      class="form-control mt-2"
+      placeholder="Nombre del personaje"
+      (change)="name.set($event.target.value)"
+      (input)="name.set($event.target.value)"
+    />
+    <input
+      type="number"
+      class="form-control mt-2"
+      placeholder="Poder del personaje"
+      (change)="power.set(+$event.target.value)"
+      (input)="power.set(+$event.target.value)"
+    />
   </div>
 
-  <button class="mt-2 btn btn-primary">Agregar</button>
+  <button (click)="addCharacter()" class="mt-2 btn btn-primary">Agregar</button>
 
   <div class="col-12 col-sm-6">
+    <h3>Personajes fuertes:</h3>
     <ul>
-      @for (character of characters(); track character.id; let idx = $index) {
+      @for (character of characters(); track character.id; let idx = $index) { @if(character.power
+      >10000){
       <li>
         <span>{{ idx + 1 }} - {{ character.name }} </span>
         <strong
-          [class.text-danger]="character.power >= 15000"
-          [class.text-primary]="character.power < 11000"
+          [class.text-danger]="character.power > 12000"
+          [class.text-primary]="character.power < 12000"
         >
           <!-- [ngClass]="powerClasses()" -->
           ({{ character.power }})
         </strong>
       </li>
-      }
+      } @else {
+      <li>
+        <span>{{ idx + 1 }} - {{ character.name }}</span
+        ><strong> Su poder es muy bajo como para mostrarlo</strong>
+      </li>
+      } }
     </ul>
   </div>
 </section>
