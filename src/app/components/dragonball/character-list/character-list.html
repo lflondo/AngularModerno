@@ -1,0 +1,21 @@
+<h3>Personajes fuertes:</h3>
+<ul>
+  @for (character of characters(); track character.id; let idx = $index) { @if(character.power
+  >10000){
+  <li>
+    <span>{{ idx + 1 }} - {{ character.name }} </span>
+    <strong
+      [class.text-danger]="character.power > 12000"
+      [class.text-primary]="character.power < 12000"
+    >
+      <!-- [ngClass]="powerClasses()" -->
+      ({{ character.power }})
+    </strong>
+  </li>
+  } @else {
+  <li>
+    <span>{{ idx + 1 }} - {{ character.name }}</span
+    ><strong> Su poder es muy bajo como para mostrarlo</strong>
+  </li>
+  } }
+</ul>
