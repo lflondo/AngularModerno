@@ -18,9 +18,10 @@
       (change)="power.set(+$event.target.value)"
       (input)="power.set(+$event.target.value)"
     />
+    <button (click)="addCharacter()" class="mt-2 btn btn-primary">Agregar</button>
   </div>
 
-  <button (click)="addCharacter()" class="mt-2 btn btn-primary">Agregar</button>
+  
 
   <div class="col-12 col-sm-6">
     <h3>Personajes fuertes:</h3>

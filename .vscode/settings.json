@@ -1,12 +1,9 @@
 {
-    "cSpell.words": [
-        "Iroman",
-        "spiderman"
-    ],
-    "angular-schematics.schematicsDefaultOptions": {
-        "angular-*": {
-            "externalTemplate": true,
-            "skipStyle": true
-        }
+  "cSpell.words": ["dragonball", "Dragonball", "Goku", "Iroman", "spiderman"],
+  "angular-schematics.schematicsDefaultOptions": {
+    "angular-*": {
+      "externalTemplate": true,
+      "skipStyle": true
     }
+  }
 }
