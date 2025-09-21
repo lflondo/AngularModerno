@@ -3,14 +3,14 @@
       type="text"
       class="form-control mt-2"
       placeholder="Nombre del personaje"
-      (change)="name.set($event.target.value)"
+      [value]="name()"
       (input)="name.set($event.target.value)"
     />
     <input
       type="number"
       class="form-control mt-2"
       placeholder="Poder del personaje"
-      (change)="power.set(+$event.target.value)"
+      [value]="power()"
       (input)="power.set(+$event.target.value)"
     />
     <button (click)="addCharacter()" class="mt-2 btn btn-primary">Agregar</button>

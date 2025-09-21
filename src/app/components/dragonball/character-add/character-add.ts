@@ -22,7 +22,7 @@ export class CharacterAdd {
     };
 
     this.newCharacter.emit(newCharacter);
-    this.resetFields();
+    this.resetFields()
   }
 
   resetFields() {
